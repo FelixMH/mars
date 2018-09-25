@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MaterialInputComponent implements OnInit {
 
+  usuario = {
+    nombre: 'Felix'
+  };
+
   constructor() { }
 
   ngOnInit() {

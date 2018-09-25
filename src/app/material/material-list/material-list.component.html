@@ -1,26 +1,13 @@
 <mat-list>
-  <mat-list-item>
-      <img src="https://media.istockphoto.com/photos/businessman-silhouette-as-avatar-or-default-profile-picture-picture-id476085198?k=6&m=476085198&s=612x612&w=0&h=5cDQxXHFzgyz8qYeBQu2gCZq1_TN0z40e_8ayzne0X0="
-      mat-line mat-list-avatar>
-    <span mat-line>{{ this.estudiante1.nombre }}</span>
-    <span mat-line>{{ this.estudiante1.ciudad }}</span>
-  </mat-list-item>
-  <mat-list-item>
-      <img src="https://media.istockphoto.com/photos/businessman-silhouette-as-avatar-or-default-profile-picture-picture-id476085198?k=6&m=476085198&s=612x612&w=0&h=5cDQxXHFzgyz8qYeBQu2gCZq1_TN0z40e_8ayzne0X0="
-      mat-line mat-list-avatar>
-    <span mat-line>{{ this.estudiante2.nombre }}</span>
-    <span mat-line>{{ this.estudiante2.ciudad }}</span>
-  </mat-list-item>
-  <mat-list-item>
-      <img src="https://media.istockphoto.com/photos/businessman-silhouette-as-avatar-or-default-profile-picture-picture-id476085198?k=6&m=476085198&s=612x612&w=0&h=5cDQxXHFzgyz8qYeBQu2gCZq1_TN0z40e_8ayzne0X0="
-      mat-line mat-list-avatar>
-    <span mat-line>{{ this.estudiante3.nombre }}</span>
-    <span mat-line>{{ this.estudiante3.ciudad }}</span>
-  </mat-list-item>
-  <mat-list-item>
-      <img src="https://media.istockphoto.com/photos/businessman-silhouette-as-avatar-or-default-profile-picture-picture-id476085198?k=6&m=476085198&s=612x612&w=0&h=5cDQxXHFzgyz8qYeBQu2gCZq1_TN0z40e_8ayzne0X0="
-      mat-line mat-list-avatar>
-    <span mat-line>{{ this.estudiante4.nombre }}</span>
-    <span mat-line>{{ this.estudiante4.ciudad }}</span>
-  </mat-list-item>
+  <dev-item-estudiante *ngFor="let est of listaEstudiantes"
+                       [estudiante]="est">
+  </dev-item-estudiante>
 </mat-list>
+<!-- <mat-list>
+  <mat-list-item *ngFor="let est of estudiantes">
+    <img *ngIf="est.photo" [src]="est.photo" mat-line mat-list-avatar>
+    <img *ngIf="!est.photo" [src]="DEFAULT_PICTURE" mat-line mat-list-avatar>
+    <span mat-line>{{ est.nombre }}</span>
+    <span mat-line>{{ est.ciudad }}</span>
+  </mat-list-item>
+</mat-list> -->

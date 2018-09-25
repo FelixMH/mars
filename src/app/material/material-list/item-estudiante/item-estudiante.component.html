@@ -1,0 +1,6 @@
+<mat-list-item>
+  <img *ngIf="estudiante.photo" [src]="estudiante.photo" mat-line mat-list-avatar>
+  <img *ngIf="!estudiante.photo" [src]="DEFAULT_PICTURE" mat-line mat-list-avatar>
+  <span mat-line>{{ estudiante.nombre }}</span>
+  <span mat-line>{{ estudiante.ciudad }}</span>
+</mat-list-item>
