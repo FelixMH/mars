@@ -12,9 +12,9 @@ export class ItemEstudianteComponent implements OnInit {
   @Input()
   estudiante: Estudiante;
 
+  // tslint:disable-next-line:no-output-on-prefix
   @Output()
-  OnMouseClick = new EventEmitter<Estudiante>();
-
+  onMouseClick = new EventEmitter<Estudiante>();
 
   constructor() { }
 
@@ -22,7 +22,7 @@ export class ItemEstudianteComponent implements OnInit {
   }
 
   onClick(e: Estudiante){
-    this.OnMouseClick.emit(e);
+    this.onMouseClick.emit(e);
   }
 
 }
