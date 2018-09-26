@@ -1,0 +1,12 @@
+.card-container {
+  align-items: center;
+}
+
+.card-content {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+}
