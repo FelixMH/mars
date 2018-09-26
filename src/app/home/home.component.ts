@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Apod } from '../shared/model/apod';
+import { NasaApiService } from '../shared/services/nasa-api.service';
 
 @Component({
   selector: 'dev-home',
@@ -9,18 +10,10 @@ import { Apod } from '../shared/model/apod';
 export class HomeComponent implements OnInit {
 
   apod: Apod;
-  constructor() { }
+  constructor(private nasaApi: NasaApiService) { }
 
   ngOnInit() {
-    this.apod = {
-      date: '2018-07-20',
-      explanation: 'What causes Hubbles Variable',
-      hdurl: 'https://apod.nasa.gov/apod/image/1711/HubblesVariableNebula',
-      media_type: 'image',
-      service_version: 'v1',
-      title: 'What Causes Hubbles Variable',
-      url: 'https://apod.nasa.gov/apod/image/1711/HubblesVariableNebula'
-    };
+    this.apod = this.nasaApi.getApod();
   }
 
 }

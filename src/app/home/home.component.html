@@ -4,8 +4,8 @@
     <h3 class="title">Astronomy Picture of the day.</h3>
     <mat-card-header>
       <img mat-card-avatar src="https://media.giphy.com/media/VLRRWXGuwHpny/giphy.gif" />
-      <mat-card-title>{{ apod.title }}</mat-card-title>
-      <mat-card-subtitle>{{ apod.date }}</mat-card-subtitle>
+      <mat-card-title>{{ apod.title | lowerCase }}</mat-card-title>
+      <mat-card-subtitle>{{ apod.date | date:'fullDate' }}</mat-card-subtitle>
     </mat-card-header>
 
     <img mat-card-image [src]="apod.url">
