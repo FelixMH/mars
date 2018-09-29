@@ -5,11 +5,18 @@
 }
 
 .card-container {
+  position: relative;
   display: flex;
   flex-flow: row wrap;
 }
 
 .card-content {
+  position: relative;
   width: 100%;
-  margin: 10px;
+  margin: 1em;
+}
+
+.card-image {
+  display: block;
+  max-width: 100%;
 }
